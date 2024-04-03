@@ -1,0 +1,40 @@
+package br.edu.cesarschool.cc.poo.ac.cliente;
+
+import br.edu.cesarschool.cc.poo.ac.utils.Registro;
+
+public class Cliente extends Registro {
+
+    String cpf;
+    String nome;
+    double saldoPontos;
+
+    public Cliente(String cpf, String nome, double saldoPontos){
+        this.cpf = cpf;
+        this.nome = nome;
+        this.saldoPontos = saldoPontos;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public double getSaldoPontos() {
+        return saldoPontos;
+    }
+
+    public void creditarPontos(double valor){
+        saldoPontos += valor;
+    }
+
+    public void debitarPontos(double valor){
+        saldoPontos -= valor;
+    }
+}
